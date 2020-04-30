@@ -13,10 +13,10 @@ export const traerTodos = () => async (dispatch) => {
 			payload: respuesta.data
 		})
 	}
-	catch (error) {
+	catch (err) {
 		dispatch({
 			type: ERROR,
-			payload: error.message
+			payload: err.message
 		})
 	}
 };

@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 import * as usuariosActions from '../../actions/usuariosActions';
 import * as publicacionesActions from '../../actions/publicacionesActions';
 
+const { traerTodos: usuariosTraerTodos } = usuariosActions;
+const { traerTodos: publicacionesTraerTodos } = publicacionesActions
 
 class Publicaciones extends Component {
     componentDidMount() {
         if (!this.props.usuariosReducer.usuarios.length) {
-            this.props.traerTodos();
+            this.props.usuariosTraerTodos();
         }
     }
 
     render() {
-        console.log(this.props)
+        console.log(this.props);
         return (
             <div>
                 <h1>Publicaciones de </h1>
@@ -30,8 +32,8 @@ const mapStateToProps = ({usuariosReducer, publicacionesReducer}) => {
 }
 
 const mapDispatchToProps = {
-    ...usuariosActions,
-    ...publicacionesActions
+    usuariosTraerTodos,
+    publicacionesTraerTodos
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Publicaciones) 
