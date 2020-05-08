@@ -76,7 +76,7 @@ class Publicaciones extends Component {
             publicaciones[publicaciones_key],
             publicaciones_key
          );
-         };
+    };
 
     mostrarInfo = (publicaciones, pub_key) => (
         publicaciones.map((publicacion, com_key) => (
@@ -92,7 +92,8 @@ class Publicaciones extends Component {
                 { publicacion.body }
               </h3>
               {
-                  (publicacion.abierto) ? <Comentarios comentarios = {publicacion.comentarios}/> : 'cerrado'
+                  (publicacion.abierto) ? <Comentarios comentarios = {publicacion.comentarios} 
+                  com_error="qwerty"/> : ''
               }
             </div>
         ))
