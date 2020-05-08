@@ -3,10 +3,9 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Menu from './Menu';
 import Usuarios from './Usuarios';
 import Publicaciones from './Publicaciones/index'
+import Tareas from './Tareas/index';
 
-const Tareas = () => <div>Tareas</div>
-
-const App = (props) => (
+const App = () => (
 	<BrowserRouter>
 		<Menu />
 		<div id="margen">

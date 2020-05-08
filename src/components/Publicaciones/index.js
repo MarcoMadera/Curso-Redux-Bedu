@@ -92,8 +92,7 @@ class Publicaciones extends Component {
                 { publicacion.body }
               </h3>
               {
-                  (publicacion.abierto) ? <Comentarios comentarios = {publicacion.comentarios} 
-                  com_error="qwerty"/> : ''
+                  (publicacion.abierto) && <Comentarios comentarios = {publicacion.comentarios} />
               }
             </div>
         ))
