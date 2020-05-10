@@ -4,7 +4,7 @@ import {
 	ERROR,
 	CAMBIO_TITULO,
 	CAMBIO_USUARIO_ID,
-	AGEGADA
+	AGREGADA
  } from '../types/tareasTypes';
 
 const INITIAL_STATE = {
@@ -39,7 +39,7 @@ export default (state = INITIAL_STATE, action) => {
 		case CAMBIO_TITULO:
 			return{ ...state, titulo: action.payload}
 
-		case AGEGADA:
+		case AGREGADA:
 			return {
 				...state, 
 				tareas: {}, 

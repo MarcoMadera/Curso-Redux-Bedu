@@ -5,7 +5,7 @@ import {
 	ERROR,
 	CAMBIO_TITULO,
 	CAMBIO_USUARIO_ID,
-	AGEGADA
+	AGREGADA
  } from '../types/tareasTypes';
 
 export const traerTodas = () => async (dispatch) => {
@@ -63,7 +63,7 @@ export const agregar = (nueva_tarea) => async (dispatch) => {
 		const respuesta = await axios.post('https://jsonplaceholder.typicode.com/todos', nueva_tarea);
 		console.log(respuesta.data)
 		dispatch({
-			type: AGEGADA
+			type: AGREGADA
 		})
 	} catch (error) {
 		console.log(error.message);
@@ -72,4 +72,8 @@ export const agregar = (nueva_tarea) => async (dispatch) => {
 			payload: 'Intente más tarde'
 		})
 	}
+}
+
+export const editar = (tarea_editada) => (dispatch) => {
+	console.log(tarea_editada)
 }
