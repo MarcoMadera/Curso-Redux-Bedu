@@ -47,6 +47,9 @@ class Guardar extends React.Component {
   render() {
     return ( 
       <div>
+        {
+          (this.props.regresar) && <Redirect to='/tareas'/>
+        }
         <h1>
           Guardar Tarea
         </h1>
