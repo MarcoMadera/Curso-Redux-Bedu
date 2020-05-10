@@ -35,14 +35,18 @@ class Tareas extends React.Component {
   }
 
   ponerTareas = (usu_id) => {
-    const {tareas} = this.props;
+    const {tareas, cambioCheck} = this.props;
     const por_usuario = {
       ...tareas[usu_id]
     }
 
     return Object.keys(por_usuario).map((tar_id) => (
       <div key={tar_id}>
-        <input type="checkbox" defaultChecked={por_usuario[tar_id].completed}/>
+        <input 
+          type="checkbox" 
+          defaultChecked={por_usuario[tar_id].completed}
+          onChange = { () => cambioCheck(usu_id, tar_id) }
+        />
         {
           por_usuario[tar_id].title
         }
